@@ -1,0 +1,22 @@
+/* styles/reset.css */
+
+/* Reset de Margens e Preenchimentos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Redefinir Estilos de Texto */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}

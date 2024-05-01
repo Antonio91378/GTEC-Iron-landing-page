@@ -1,0 +1,15 @@
+.button {
+  width: var(--button-width);
+  height: var(--button-height);
+  color: var(--button-color);
+  background-color: var(--button-backgroundColor);
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.button a {
+  text-decoration: none;
+  color: var(--button-textColor);
+}
