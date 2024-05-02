@@ -9,46 +9,55 @@ export default function Home() {
     <div>
       <Container>
         <Header />
-        <Section
-          SectionHeight="808px"
-          sectionBackgroundColor="#888"
-          className="MainSection"
-        >
-          <Card cardWidth="560px" cardHeight="490px" className="CardComponent">
-            <h1 style={{ fontSize: "3.9rem", paddingBottom: "1.8rem" }}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore?
-            </h1>
-            <p style={{ paddingBottom: "2.5rem" }}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas,
-              vel architecto atque cum distinctio incidunt! Suscipit voluptate
-              repudiandae iusto voluptates!
-            </p>
-            <div>
-              <Button
-                buttonWidth={"400px"}
-                buttonHeight={"60px"}
-                buttonBackgroundColor={"red"}
-                buttonTextColor={"white"}
-              />
-            </div>
-          </Card>
-        </Section>
-        <Section
-          SectionHeight="660px"
-          sectionBackgroundColor="#555"
-          className="AboutSection"
-        >
-          <Card
-            cardWidth="560px"
-            cardHeight="640px"
-            className="CardAboutUs"
-          ></Card>
-          <Card
-            cardWidth="560px"
-            cardHeight="640px"
-            className="CardAboutUs"
-          ></Card>
-        </Section>
+        <Container className="HotSpotContainer">
+          <Section
+            SectionHeight="808px"
+            sectionBackgroundColor="#888"
+            className="MainSection"
+          >
+            <Card
+              cardWidth="560px"
+              cardHeight="490px"
+              className="CardComponent"
+            >
+              <h1 style={{ fontSize: "3.9rem", paddingBottom: "1.8rem" }}>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Labore?
+              </h1>
+              <p style={{ paddingBottom: "2.5rem" }}>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas,
+                vel architecto atque cum distinctio incidunt! Suscipit voluptate
+                repudiandae iusto voluptates!
+              </p>
+              <div>
+                <Button
+                  buttonWidth={"400px"}
+                  buttonHeight={"60px"}
+                  buttonBackgroundColor={"red"}
+                  buttonTextColor={"white"}
+                />
+              </div>
+            </Card>
+          </Section>
+        </Container>
+        <Container className="AboutContainer">
+          <Section
+            SectionHeight="660px"
+            sectionBackgroundColor="#555"
+            className="AboutSection"
+          >
+            <Card
+              cardWidth="560px"
+              cardHeight="640px"
+              className="CardAboutUs"
+            ></Card>
+            <Card
+              cardWidth="560px"
+              cardHeight="640px"
+              className="CardAboutUs"
+            ></Card>
+          </Section>
+        </Container>
         <Container className="GridContainer">
           <Section
             SectionHeight="100px"
@@ -115,12 +124,26 @@ export default function Home() {
             sectionBackgroundColor="#444"
             className="TitleSection"
           >
-            <h1>Teste</h1>
+            <h1>Clients</h1>
           </Section>
-          <Section
-            SectionHeight="180px"
-            sectionBackgroundColor="#666"
-          ></Section>
+          <Section SectionHeight="180px" sectionBackgroundColor="#666">
+            <h1>Carrousel</h1>
+          </Section>
+        </Container>
+        <Container className="ArticlesContainer">
+          <Section SectionHeight="360px" sectionBackgroundColor="#444">
+            <h1>Posts</h1>
+          </Section>
+        </Container>
+        <Container className="ContactContainer">
+          <Section SectionHeight="420px" sectionBackgroundColor="#fff">
+            <h1>Contact us</h1>
+          </Section>
+        </Container>
+        <Container className="FooterContainer">
+          <Section SectionHeight="300px" sectionBackgroundColor="#999">
+            <h1>Footer</h1>
+          </Section>
         </Container>
       </Container>
     </div>
