@@ -5,6 +5,9 @@
   padding: 10px;
   height: 110px;
   border: red solid 1px;
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
 }
 
 .navbar-list {

@@ -1,20 +1,53 @@
 .Section {
-  background-color: #888;
   height: var(--section-height);
+  background-color: var(--section-backgroundColor);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.Section .CardComponent {
+  width: 100vw;
   position: relative;
-  left: -270px;
-  top: 80px;
+  top: 110px;
 }
 
-.Section .Card div:last-child {
+.AboutSection {
+  justify-content: center;
+  align-items: start;
+}
+
+.TitleSection {
+  top: 0px !important;
+}
+
+.Section .CardAboutUs {
+  position: relative;
+  top: 0px;
+  border: 1px solid red;
+}
+
+.GridSection {
+  display: grid;
+  height: var(--section-height);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 80vw;
+  position: relative;
+  top: 0px !important;
+}
+
+.Section .CardComponent {
+  position: relative;
+  left: -280px;
+  top: 55px;
+}
+
+.Section .CardServices {
+  border: 1px solid red;
+}
+
+/* .Section .Card div:last-child {
   display: flex;
   flex-direction: column;
   justify-content: flex;
   color: aqua;
   align-items: flex-start;
-}
+} */
