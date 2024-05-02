@@ -6,7 +6,6 @@
   align-items: center;
   width: 100vw;
   position: relative;
-  top: 110px;
 }
 
 .AboutSection {
@@ -24,6 +23,12 @@
   border: 1px solid red;
 }
 
+.PortifolioSection {
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
 .GridSection {
   display: grid;
   height: var(--section-height);
@@ -38,17 +43,9 @@
 .Section .CardComponent {
   position: relative;
   left: -280px;
-  top: 55px;
+  top: 110px;
 }
 
 .Section .CardServices {
   border: 1px solid red;
 }
-
-/* .Section .Card div:last-child {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex;
-  color: aqua;
-  align-items: flex-start;
-} */

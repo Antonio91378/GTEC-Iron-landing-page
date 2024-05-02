@@ -10,15 +10,15 @@ export default function Home() {
       <Container>
         <Header />
         <Section
-          SectionHeight="698px"
+          SectionHeight="808px"
           sectionBackgroundColor="#888"
           className="MainSection"
         >
-          <Card cardWidth="560px" cardHeight="470px" className="CardComponent">
-            <h1 style={{ fontSize: "3.9rem", paddingBottom: "1.4rem" }}>
+          <Card cardWidth="560px" cardHeight="490px" className="CardComponent">
+            <h1 style={{ fontSize: "3.9rem", paddingBottom: "1.8rem" }}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore?
             </h1>
-            <p style={{ paddingBottom: "1.6rem" }}>
+            <p style={{ paddingBottom: "2.5rem" }}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas,
               vel architecto atque cum distinctio incidunt! Suscipit voluptate
               repudiandae iusto voluptates!
@@ -108,6 +108,19 @@ export default function Home() {
               className="CardServices"
             ></Card>
           </Section>
+        </Container>
+        <Container className="PortifolioContainer">
+          <Section
+            SectionHeight="180px"
+            sectionBackgroundColor="#444"
+            className="TitleSection"
+          >
+            <h1>Teste</h1>
+          </Section>
+          <Section
+            SectionHeight="180px"
+            sectionBackgroundColor="#666"
+          ></Section>
         </Container>
       </Container>
     </div>

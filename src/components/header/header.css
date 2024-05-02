@@ -3,7 +3,6 @@
 .navbar {
   background-color: #333;
   padding: 10px;
-  height: 110px;
   border: red solid 1px;
   position: fixed;
   width: 100vw;
