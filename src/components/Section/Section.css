@@ -29,7 +29,7 @@
   height: var(--section-height);
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  width: 80vw;
+  width: 1125px;
   position: relative;
   top: 0px !important;
 }

@@ -10,7 +10,7 @@ export default function Home() {
       <Container>
         <Header />
         <Section
-          SectionHeight="600px"
+          SectionHeight="698px"
           sectionBackgroundColor="#888"
           className="MainSection"
         >
