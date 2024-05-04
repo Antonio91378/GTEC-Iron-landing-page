@@ -2,14 +2,55 @@
   width: var(--button-width);
   height: var(--button-height);
   color: var(--button-color);
+  font-family: "Eurostile", Sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0px;
   background-color: var(--button-backgroundColor);
-
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
+  border-radius: 3px;
 }
+
 .button a {
   text-decoration: none;
   color: var(--button-textColor);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transitionButton {
+  background-color: var(--button-backgroundColor);
+  border: solid 3px var(--secondaryColor);
+  border-radius: 0px;
+}
+
+.button a {
+  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 100 !important;
+}
+
+.button.transitionButton a:hover {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  transition: 400ms;
+}
+.button.transitionButton.navbarButton {
+  background-color: var(--lightColor);
+  border: 3px solid var(--primaryColor);
+}
+.button.transitionButton.navbarButton a {
+  color: var(--darkColor);
+}
+.button.transitionButton.navbarButton a:hover {
+  background-color: var(--darkColor);
+  color: var(--lightColor);
+  border: 3px solid var(--darkColor);
+  transition: 400ms;
 }

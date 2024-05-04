@@ -7,6 +7,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primaryColor: rgb(0, 56, 35);
+  --secondaryColor: rgb(73, 214, 148);
+  --darkColor: #333;
+  --lightColor: #fff;
+}
+
 html {
   overflow-x: hidden;
 }
@@ -22,5 +29,4 @@ h6,
 p {
   margin: 0;
   padding: 0;
-  font-family: inherit;
 }

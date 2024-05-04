@@ -2,13 +2,14 @@ import Button from "../button/button";
 import Card from "../card/card";
 import "./header.css";
 import React from "react";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-list">
-        <li className="navbar-item">
-          <Card cardWidth="250px" cardHeight="100%" />
+        <li className="navbar-logo">
+          <Image src="/logo.png" alt="Logo" width={130} height={80} />
         </li>
         <li className="navbar-item">
           <a href="/" className="navbar-link">
@@ -34,9 +35,12 @@ const Navbar: React.FC = () => {
           <Button
             buttonWidth="250px"
             buttonHeight="100%"
-            buttonBackgroundColor="#333"
-            buttonTextColor="#fff"
-          />
+            buttonBackgroundColor="var(--darkColor)"
+            buttonTextColor="var(--lightColor)"
+            className="transitionButton navbarButton"
+          >
+            Entre em contato
+          </Button>
         </li>
       </ul>
     </nav>

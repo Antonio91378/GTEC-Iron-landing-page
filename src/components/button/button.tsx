@@ -6,6 +6,8 @@ interface buttonProps {
   buttonHeight: string;
   buttonBackgroundColor: string;
   buttonTextColor: string;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const Button: React.FC<buttonProps> = ({
@@ -13,6 +15,8 @@ const Button: React.FC<buttonProps> = ({
   buttonHeight,
   buttonBackgroundColor,
   buttonTextColor,
+  className,
+  children,
 }) => {
   const buttonStyle: React.CSSProperties = {
     "--button-width": buttonWidth,
@@ -22,8 +26,8 @@ const Button: React.FC<buttonProps> = ({
   } as React.CSSProperties;
 
   return (
-    <div className="button" style={buttonStyle}>
-      <a href="#">Entre em contato</a>
+    <div className={`button ${className}`} style={buttonStyle}>
+      <a href="#">{children}</a>
     </div>
   );
 };

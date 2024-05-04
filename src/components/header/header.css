@@ -1,12 +1,10 @@
-/* components/Navbar.module.css */
-
 .navbar {
-  background-color: #333;
+  background-color: var(--lightColor);
   padding: 10px;
-  border: red solid 1px;
   position: fixed;
   width: 100vw;
   z-index: 1;
+  height: 110px;
 }
 
 .navbar-list {
@@ -16,14 +14,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: red solid 1px;
   height: 100%;
+  position: relative;
+  left: 192px;
 }
 
 .navbar-item {
   text-align: center;
   margin-right: 10px;
-  border: blue solid 2px;
   font-size: 22px;
   min-width: 135px;
   height: 70px;
@@ -32,10 +30,19 @@
   justify-content: center;
 }
 
+.navbar-logo img {
+  height: 90px;
+  position: relative;
+  left: -360px;
+}
+
 .navbar-link {
-  border: blue solid 2px;
-  color: #fff;
+  padding: 10px;
   text-decoration: none;
+  color: var(--primaryColor);
+  font-family: "IBM Plex Sans", Sans-serif;
+  font-size: 20px;
+  font-weight: 400px;
 }
 
 .navbar-link:hover {

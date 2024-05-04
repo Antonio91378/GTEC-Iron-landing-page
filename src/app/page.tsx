@@ -4,6 +4,8 @@ import Section from "@/components/Section/Section";
 import Card from "@/components/card/card";
 import Button from "@/components/button/button";
 import Container from "@/components/container/container";
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div>
@@ -12,31 +14,61 @@ export default function Home() {
         <Container className="HotSpotContainer">
           <Section
             SectionHeight="808px"
-            sectionBackgroundColor="#888"
+            sectionBackgroundColor="rgb(6, 78, 44)"
             className="MainSection"
           >
             <Card
               cardWidth="560px"
               cardHeight="490px"
+              cardBackgroundColor="rgb(6, 78, 44)"
               className="CardComponent"
             >
-              <h1 style={{ fontSize: "3.9rem", paddingBottom: "1.8rem" }}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Labore?
+              <h1 style={{ fontSize: "2.9rem", paddingBottom: "1.8rem" }}>
+                Serviços de engenharia, foco em{" "}
+                <span
+                  style={{
+                    color: "var(--secondaryColor)",
+                    textShadow: "1px 1px 1px var(--darkColor)",
+                  }}
+                >
+                  mecânica, caldeiraria, tubulação e estrutura metálica
+                </span>
               </h1>
-              <p style={{ paddingBottom: "2.5rem" }}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas,
-                vel architecto atque cum distinctio incidunt! Suscipit voluptate
-                repudiandae iusto voluptates!
+              <p
+                style={{
+                  paddingBottom: "1.4rem",
+                  fontFamily: "'IBM Plex Sans', sans-serif",
+                  color: "var(--lightColor)",
+                }}
+              >
+                De olho no seu futuro, desenvolvemos e construimos seu projeto,
+                trabalhando com construções modulares ágeis, limpas e
+                eficientes. Vendas e locações sustentáveis.
               </p>
               <div>
                 <Button
                   buttonWidth={"400px"}
                   buttonHeight={"60px"}
-                  buttonBackgroundColor={"red"}
+                  buttonBackgroundColor={"var(--primaryColor)"}
                   buttonTextColor={"white"}
-                />
+                  className="transitionButton"
+                >
+                  Agende uma consulta técnica
+                </Button>
               </div>
+            </Card>
+            <Card
+              cardWidth="560px"
+              cardHeight="490px"
+              cardBackgroundColor="rgb(6, 78, 44)"
+              className="mainGif"
+            >
+              <Image
+                src="/projetos.gif"
+                alt="projetos GIF"
+                width={750}
+                height={400}
+              />
             </Card>
           </Section>
         </Container>

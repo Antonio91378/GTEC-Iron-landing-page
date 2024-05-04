@@ -4,6 +4,7 @@ import "./card.css";
 interface CardProps {
   cardWidth: string;
   cardHeight: string;
+  cardBackgroundColor: string;
   children?: React.ReactNode;
   className?: string;
 }
@@ -11,12 +12,14 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({
   cardWidth,
   cardHeight,
+  cardBackgroundColor,
   className,
   children,
 }) => {
   const cardStyle: React.CSSProperties = {
     "--card-width": cardWidth,
     "--card-height": cardHeight,
+    "--card-backgroundColor": cardBackgroundColor,
   } as React.CSSProperties;
 
   return (

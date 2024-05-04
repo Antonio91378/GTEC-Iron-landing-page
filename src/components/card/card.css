@@ -1,5 +1,18 @@
 .card {
   width: var(--card-width);
   height: var(--card-height);
-  background-color: #6f7eb9;
+  background-color: var(--card-backgroundColor);
+}
+
+.card h1 {
+  font-size: "3.9rem";
+  padding-bottom: "1.8rem";
+  font-family: "Eurostile", Sans-serif;
+  font-weight: 900;
+  line-height: 60px;
+  color: #fff;
+}
+
+.card img {
+  box-shadow: 0px 0px 10px 1px var(--secondaryColor);
 }
