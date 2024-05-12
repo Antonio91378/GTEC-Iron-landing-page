@@ -59,7 +59,7 @@ button {
   color: var(--primaryColor);
   transition: 400ms;
   cursor: pointer !important;
-  z-index: 500;
+  z-index: 200;
 }
 .button.transitionButton.navbarButton {
   background-color: var(--lightColor);
@@ -71,7 +71,7 @@ button {
 }
 .button.transitionButton.navbarButton.top:hover {
   cursor: pointer !important;
-  z-index: 500;
+  z-index: 200;
   background-color: var(--darkColor);
   color: var(--lightColor);
   border: 3px solid var(--darkColor);

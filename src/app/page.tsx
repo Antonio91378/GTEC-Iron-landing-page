@@ -21,7 +21,6 @@ export default function Home() {
   const [serviceButton2, setserviceButton2] = useState<string>("Desactive");
 
   const changeFilterOurServices = (filterValue: number) => {
-    debugger;
     if (filterValue == 1) {
       setserviceButton1("Active");
       setserviceButton2("Desactive");
@@ -30,6 +29,17 @@ export default function Home() {
       setserviceButton2("Active");
     }
     setSelectedFilter(filterValue);
+  };
+
+  const handleScroll = (targetId: string) => {
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      const topOffset = targetElement.getBoundingClientRect().top - 100;
+      window.scrollTo({
+        top: window.pageYOffset + topOffset,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -70,15 +80,17 @@ export default function Home() {
                 trabalhando com construções modulares ágeis, limpas e
                 eficientes. Vendas e locações sustentáveis.
               </p>
-              <Button
-                buttonWidth={"400px"}
-                buttonHeight={"60px"}
-                buttonBackgroundColor={"var(--primaryColor)"}
-                buttonTextColor={"white"}
-                className="transitionButton mainButton"
-              >
-                Agende uma consulta técnica
-              </Button>
+              <a onClick={() => handleScroll("#Contact")}>
+                <Button
+                  buttonWidth={"400px"}
+                  buttonHeight={"60px"}
+                  buttonBackgroundColor={"var(--primaryColor)"}
+                  buttonTextColor={"white"}
+                  className="transitionButton mainButton"
+                >
+                  Agende uma consulta técnica
+                </Button>
+              </a>
             </Card>
             <Card
               cardWidth="560px"
