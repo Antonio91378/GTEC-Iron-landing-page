@@ -6,15 +6,21 @@
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 0px;
-  background-color: var(--button-backgroundColor);
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
-  border-radius: 3px;
+  border: none;
+  min-height: 48px;
 }
 
-.button a {
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.button p {
   text-decoration: none;
   color: var(--button-textColor);
   height: 100%;
@@ -24,33 +30,74 @@
   align-items: center;
 }
 
-.transitionButton {
+.transitionButton.navbarButton,
+.transitionButton.mainButton {
   background-color: var(--button-backgroundColor);
   border: solid 3px var(--secondaryColor);
   border-radius: 0px;
+  height: 64px;
 }
 
-.button a {
+.button {
+  position: relative;
+  color: #fff;
   font-family: "IBM Plex Sans", Sans-serif !important;
   font-size: 20px !important;
   font-weight: 100 !important;
+  padding: 4px;
 }
 
-.button.transitionButton a:hover {
+.button.transitionButton:hover {
   background-color: var(--secondaryColor);
   color: var(--primaryColor);
   transition: 400ms;
+}
+
+.button.transitionButton:hover,
+.button.servicesButton.Desactive:hover {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  transition: 400ms;
+  cursor: pointer !important;
+  z-index: 500;
 }
 .button.transitionButton.navbarButton {
   background-color: var(--lightColor);
   border: 3px solid var(--primaryColor);
 }
-.button.transitionButton.navbarButton a {
+.button.transitionButton.navbarButton.top {
   color: var(--darkColor);
+  height: 80px;
 }
-.button.transitionButton.navbarButton a:hover {
+.button.transitionButton.navbarButton.top:hover {
+  cursor: pointer !important;
+  z-index: 500;
   background-color: var(--darkColor);
   color: var(--lightColor);
   border: 3px solid var(--darkColor);
   transition: 400ms;
+}
+.button.servicesButton {
+  background-color: var(--darkColor);
+  color: var(--lightColor);
+  transition: 400ms;
+  border: 3px solid var(--secondaryColor);
+}
+.button.servicesButton:hover {
+  border: none;
+  z-index: 200;
+  cursor: pointer !important;
+}
+.button.servicesButton.Desactive {
+  background-color: var(--primaryColor);
+  scale: 98%;
+}
+.button.servicesButton.Active {
+  background-color: var(--secondaryColor);
+  transform: scale(1.1);
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #333;
+  z-index: 200;
+  scale: 98%;
 }

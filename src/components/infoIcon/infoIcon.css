@@ -1,0 +1,53 @@
+/* InfoIcon.module.css */
+
+.infoIcon {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  border-radius: 50%;
+  flex-direction: row;
+  border: 1px solid var(--lightColor);
+  width: 35px;
+  height: 35px;
+  left: -22px;
+  /* margin-left: 5px; */
+}
+
+.hoverTrigger {
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid var(--lightColor);
+  width: 35px;
+  height: 35px;
+  border: 1px solid red;
+}
+
+.iconLetter {
+  position: relative;
+  left: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.tooltip {
+  text-indent: 50px;
+  text-justify: distribute;
+  text-align: justify;
+  font-size: 1.2rem;
+  min-width: 300px;
+  z-index: 200;
+  position: absolute;
+  top: 100%;
+  left: 150px;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: pre-wrap; /* Permite que o texto quebre a linha */
+  box-shadow: 0px 5px 30px 1px #333;
+}

@@ -1,0 +1,63 @@
+/* Estilização geral do formulário */
+form {
+  position: relative;
+  z-index: 200;
+  width: 99%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(6, 78, 44);
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 0px 0px 5px 0.02px var(--secondaryColor);
+}
+
+form label {
+  color: #fff;
+  font-weight: 100;
+}
+
+/* Estilização dos campos de entrada */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007bff;
+}
+
+/* Estilização do botão de envio */
+input[type="submit"] {
+  background-color: rgb(0, 143, 72);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(0, 219, 113);
+  color: #333;
+}
+
+/* Estilização das etiquetas (labels) */
+label {
+  font-weight: bold;
+}
+
+/* Estilização de erro (opcional) */
+.error {
+  color: #dc3545;
+  font-size: 14px;
+}

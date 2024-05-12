@@ -1,3 +1,21 @@
 .Container {
   position: relative;
 }
+.Container.AboutContainer {
+  background-color: rgb(0, 143, 88);
+}
+.Container.GridContainer {
+  background-color: var(--primaryColor);
+  height: auto;
+  padding-bottom: 3.5rem;
+}
+.Container.PortifolioContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 143, 88);
+}
+
+.Container.FooterContainer {
+  background-color: #222;
+}

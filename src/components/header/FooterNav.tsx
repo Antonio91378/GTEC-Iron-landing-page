@@ -1,4 +1,3 @@
-import Button from "../button/button";
 import "./header.css";
 import React from "react";
 import Image from "next/image";
@@ -7,7 +6,7 @@ interface HeaderProps {
   className?: string;
 }
 
-const Navbar: React.FC<HeaderProps> = ({ className }) => {
+const FooterNav: React.FC<HeaderProps> = ({ className }) => {
   const handleScroll = (targetId: string) => {
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
@@ -43,22 +42,9 @@ const Navbar: React.FC<HeaderProps> = ({ className }) => {
             Nossos clientes
           </a>
         </li>
-        <li className="navbar-item">
-          <a onClick={() => handleScroll("#Contact")}>
-            <Button
-              buttonWidth="250px"
-              buttonHeight="100%"
-              buttonBackgroundColor="var(--darkColor)"
-              buttonTextColor="var(--lightColor)"
-              className="transitionButton navbarButton top"
-            >
-              Entre em contato
-            </Button>
-          </a>
-        </li>
       </ul>
     </nav>
   );
 };
 
-export default Navbar;
+export default FooterNav;

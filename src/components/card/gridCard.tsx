@@ -1,7 +1,10 @@
-import React from "react";
+"use Client";
+import React, { Children } from "react";
 import "./card.css";
+import { MageCupHot } from "../icons/MageCupHot";
 
 interface CardProps {
+  icon?: React.FC<React.SVGProps<SVGSVGElement>>;
   cardTitle?: string;
   cardWidth?: string;
   cardHeight?: string;
@@ -10,7 +13,9 @@ interface CardProps {
   className?: string;
 }
 
-const Card: React.FC<CardProps> = (props) => {
+const GridCard: React.FC<CardProps> = (props) => {
+  const IconComponent = props.icon as React.FC<React.SVGProps<SVGSVGElement>>;
+
   const cardStyle: React.CSSProperties = {
     "--card-width": props.cardWidth,
     "--card-height": props.cardHeight,
@@ -19,9 +24,11 @@ const Card: React.FC<CardProps> = (props) => {
 
   return (
     <div className={`card ${props.className}`} style={cardStyle}>
-      {props.children}
+      <IconComponent className="icon" />
+      <h2>{props.cardTitle}</h2>
+      <p>{props.children}</p>
     </div>
   );
 };
 
-export default Card;
+export default GridCard;

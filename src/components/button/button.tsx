@@ -1,3 +1,4 @@
+"use Client";
 import React from "react";
 import "./button.css";
 
@@ -27,7 +28,7 @@ const Button: React.FC<buttonProps> = ({
 
   return (
     <div className={`button ${className}`} style={buttonStyle}>
-      <a href="#">{children}</a>
+      {children}
     </div>
   );
 };

@@ -5,14 +5,113 @@
 }
 
 .card h1 {
-  font-size: "3.9rem";
-  padding-bottom: "1.8rem";
   font-family: "Eurostile", Sans-serif;
   font-weight: 900;
   line-height: 60px;
-  color: #fff;
+  color: var(--lightColor);
 }
 
-.card img {
+.card.gridCards h2 {
+  font-size: 20px !important;
+  font-family: "IBM Plex Sans", Sans-serif;
+  color: var(--primaryColor);
+  padding-left: 14px;
+  position: relative;
+  top: -10px;
+}
+
+.card.gridCards {
+  box-shadow: 0px 2px 20px 1px var(--darkColor);
+}
+.card.gridCards .icon {
+  margin: 14px;
+}
+.card.gridCards p {
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.3rem;
+}
+
+.card.mainGif img {
   box-shadow: 0px 0px 10px 1px var(--secondaryColor);
+}
+
+.portifolio-card-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.portifolio-card-1.card h1 {
+  color: var(--lightColor) !important;
+  font-family: "Eurostile", Sans-serif;
+  text-shadow: 1px 1px 4px rgb(0, 118, 73);
+  font-weight: 900;
+  line-height: 3rem;
+  letter-spacing: 0px;
+  margin-bottom: 1.5rem;
+  text-align: start;
+  padding-left: 20px;
+}
+.card .ImagesPotifolioCard {
+  margin-top: 1.2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card.ImagesPotifolioCard2 img {
+  box-shadow: 0px 5px 10px 1px var(--secondaryColor);
+}
+
+.ContactUs1 {
+  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 100 !important;
+}
+
+.ContactUs1 h1 {
+  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 100 !important;
+}
+
+.ContactUs2 {
+  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 100 !important;
+  position: relative;
+}
+
+.ContactUs2 img {
+  position: absolute;
+  bottom: -65px;
+  left: -80px;
+}
+
+.FooterCard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.IconsFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+@keyframes rollout {
+  0% {
+    opacity: 0;
+    transform: translateX(900px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.roll-out {
+  animation: 0.8s ease-out rollout;
 }
