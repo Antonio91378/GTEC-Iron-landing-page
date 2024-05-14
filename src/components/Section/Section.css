@@ -27,6 +27,30 @@
   font-weight: 700;
 }
 
+.ContactUs.TitleSection {
+  flex-direction: row;
+}
+
+.ContactUs.TitleSection a {
+  margin-left: 2rem;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .Section.TitleSection.portifolio {
   flex-direction: row;
   align-items: center;

@@ -331,6 +331,12 @@ export default function Home() {
                 >
                   Fale Conosco
                 </h1>
+                <a
+                  href="https://api.whatsapp.com/send?phone=5534999851811"
+                  target="_blank"
+                >
+                  <WhatsApp />
+                </a>
               </Section>
               <ContactUs />
             </Card>
@@ -358,8 +364,18 @@ export default function Home() {
             <Card cardWidth="1355px" cardHeight="auto" className="FooterCard">
               <FooterNav className="FooterHeader" />
               <Card cardWidth="96px" cardHeight="50px" className="IconsFooter">
-                <WhatsApp />
-                <Linkedin />
+                <a
+                  href="https://api.whatsapp.com/send?phone=5534999851811"
+                  target="_blank"
+                >
+                  <WhatsApp />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/gtec-ironn/?viewAsMember=true"
+                  target="_blank"
+                >
+                  <Linkedin />
+                </a>
               </Card>
             </Card>
             <div
@@ -372,8 +388,14 @@ export default function Home() {
             />
             <p>
               {" "}
-              copyright © 2024, all rights reserved. Powered by
-              linkedin.com/in/antonio-dias2000/
+              copyright © 2024, all rights reserved. Powered by{" "}
+              <a
+                href="https://www.linkedin.com/in/antonio-dias2000/"
+                target="_blank"
+                style={{ color: "#666" }}
+              >
+                Antônio Dias
+              </a>
             </p>
           </Section>
         </Container>

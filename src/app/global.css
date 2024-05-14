@@ -42,5 +42,6 @@ Link {
 }
 
 a {
+  text-decoration: none;
   cursor: pointer;
 }
