@@ -3,11 +3,7 @@ import "./header.css";
 import React from "react";
 import Image from "next/image";
 
-interface HeaderProps {
-  className?: string;
-}
-
-const Navbar: React.FC<HeaderProps> = ({ className }) => {
+const Navbar: React.FC = () => {
   const handleScroll = (targetId: string) => {
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
@@ -20,11 +16,14 @@ const Navbar: React.FC<HeaderProps> = ({ className }) => {
   };
 
   return (
-    <nav className={`navbar ${className}`}>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <Image src="/logo.png" alt="Logo" width={130} height={100} />
+        <div className="slogan">
+          <h3>ENGENHARIA QUE CONSTRÓI</h3>
+        </div>
+      </div>
       <ul className="navbar-list">
-        <li className="navbar-logo">
-          <Image src="/logo.png" alt="Logo" width={130} height={80} />
-        </li>
         <li className="navbar-item">
           <a onClick={() => handleScroll("#About")} className="navbar-link">
             Sobre nós

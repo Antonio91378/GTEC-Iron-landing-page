@@ -45,7 +45,9 @@ export default function Home() {
   return (
     <div>
       <Container>
-        <Header />
+        <Container className="Navbar">
+          <Header />
+        </Container>
         <Container className="HotSpotContainer" id="Home">
           <Section
             SectionHeight="808px"
@@ -53,12 +55,18 @@ export default function Home() {
             className="MainSection"
           >
             <Card
-              cardWidth="614px"
+              cardWidth="550px"
               cardHeight="490px"
               cardBackgroundColor="rgb(6, 78, 44)"
               className="CardComponent"
             >
-              <h1 style={{ fontSize: "2.9rem", paddingBottom: "1.8rem" }}>
+              <h1
+                style={{
+                  fontSize: "2.5rem",
+                  paddingBottom: "1.8rem",
+                  lineHeight: "3rem ",
+                }}
+              >
                 Serviços de engenharia, foco em{" "}
                 <span
                   style={{
@@ -80,20 +88,9 @@ export default function Home() {
                 trabalhando com construções modulares ágeis, limpas e
                 eficientes. Vendas e locações sustentáveis.
               </p>
-              <a onClick={() => handleScroll("#Contact")}>
-                <Button
-                  buttonWidth={"400px"}
-                  buttonHeight={"60px"}
-                  buttonBackgroundColor={"var(--primaryColor)"}
-                  buttonTextColor={"white"}
-                  className="transitionButton mainButton"
-                >
-                  Agende uma consulta técnica
-                </Button>
-              </a>
             </Card>
             <Card
-              cardWidth="560px"
+              cardWidth="600px"
               cardHeight="490px"
               cardBackgroundColor="rgb(6, 78, 44)"
               className="mainGif"
@@ -101,7 +98,7 @@ export default function Home() {
               <Image
                 src="/projetos.gif"
                 alt="projetos GIF"
-                width={720}
+                width={600}
                 height={400}
               />
             </Card>
@@ -109,17 +106,18 @@ export default function Home() {
         </Container>
         <Container className="AboutContainer" id="About">
           <Section
-            SectionHeight="650px"
+            SectionHeight="612px"
             sectionBackgroundColor="rgb(0, 143, 88)"
             className="AboutSection"
           >
             <Card
-              cardWidth="468px"
+              cardWidth="35%"
               cardHeight="640px"
               className="CardAboutUs"
               cardBackgroundColor="rgb(0, 143, 88)"
             >
               <Image
+                className="aboutImage1"
                 src="/aboutUs1.png"
                 alt="aboutUs1"
                 width={100}
@@ -128,8 +126,8 @@ export default function Home() {
               />
               <p
                 style={{
-                  fontSize: "1.35rem",
-                  paddingTop: "2.5rem",
+                  fontSize: "1.2rem",
+                  marginTop: "2.4rem",
                   color: "var(--lightColor)",
                   textShadow: "1px 1px 5px var(--primaryColor)",
                 }}
@@ -142,7 +140,7 @@ export default function Home() {
               </p>
             </Card>
             <Card
-              cardWidth="868px"
+              cardWidth="65%"
               cardHeight="640px"
               className="CardAboutUs"
               cardBackgroundColor="rgb(0, 143, 88)"
@@ -154,6 +152,7 @@ export default function Home() {
               >
                 <h1
                   style={{
+                    marginTop: "1.2rem",
                     color: "var(--lightColor)",
                     textShadow: "1px 1px 5px var(--primaryColor)",
                   }}
@@ -163,7 +162,9 @@ export default function Home() {
               </Section>
               <p
                 style={{
-                  fontSize: "1.35rem",
+                  paddingLeft: "15px",
+                  marginTop: ".6rem",
+                  fontSize: "1.2rem",
                   paddingBottom: "3.5rem",
                   color: "var(--lightColor)",
                   textShadow: "1px 1px 5px var(--primaryColor)",
@@ -183,11 +184,12 @@ export default function Home() {
               </p>
 
               <Image
+                className="about2"
                 src="/aboutUs2.png"
                 alt="aboutUs2"
-                width={100}
-                height={80}
-                layout="responsive"
+                width={750}
+                height={235}
+                // layout="responsive"
               />
             </Card>
           </Section>
@@ -207,7 +209,7 @@ export default function Home() {
           >
             <button onClick={() => changeFilterOurServices(1)}>
               <Button
-                buttonWidth="300px"
+                buttonWidth="260px"
                 buttonHeight="100%"
                 buttonBackgroundColor="var(--darkColor)"
                 buttonTextColor="var(--lightColor)"
@@ -218,7 +220,7 @@ export default function Home() {
             </button>
             <button onClick={() => changeFilterOurServices(2)}>
               <Button
-                buttonWidth="300px"
+                buttonWidth="260px"
                 buttonHeight="100%"
                 buttonBackgroundColor="var(--darkColor)"
                 buttonTextColor="var(--lightColor)"
@@ -274,7 +276,7 @@ export default function Home() {
                 <Image
                   src="/logo2.png"
                   alt="projetos GIF"
-                  width={160}
+                  width={150}
                   height={90}
                 />
                 <Image
@@ -307,69 +309,16 @@ export default function Home() {
             </Card>
           </Section>
         </Container>
-        <Container className="ContactContainer" id="Contact">
-          <Section
-            SectionHeight="510px"
-            sectionBackgroundColor="rgb(0, 94, 58)"
-          >
-            <Card
-              cardWidth="680px"
-              cardHeight="477px"
-              cardBackgroundColor="rgb(6, 78, 44)"
-              className="ContactUs1"
-            >
-              <Section
-                SectionHeight="100px"
-                sectionBackgroundColor="rgb(0, 143, 88)"
-                className="ContactUs TitleSection"
-              >
-                <h1
-                  style={{
-                    color: "var(--lightColor)",
-                    textShadow: "1px 1px 5px var(--primaryColor)",
-                  }}
-                >
-                  Fale Conosco
-                </h1>
-                <a
-                  href="https://api.whatsapp.com/send?phone=5534999851811"
-                  target="_blank"
-                >
-                  <WhatsApp />
-                </a>
-              </Section>
-              <ContactUs />
-            </Card>
-            <Card
-              cardWidth="680px"
-              cardHeight="477px"
-              cardBackgroundColor="rgb(6, 78, 44)"
-              className="ContactUs2"
-            >
-              <Image
-                src="/contactUs3.png"
-                alt="aboutUs2"
-                width={840}
-                height={580}
-              />
-            </Card>
-          </Section>
-        </Container>
         <Container className="FooterContainer">
           <Section
             SectionHeight="200px"
             sectionBackgroundColor="#222"
             className="FooterSection"
           >
-            <Card cardWidth="1355px" cardHeight="auto" className="FooterCard">
+            <Card cardWidth="1200px" cardHeight="auto" className="FooterCard">
               <FooterNav className="FooterHeader" />
-              <Card cardWidth="96px" cardHeight="50px" className="IconsFooter">
-                <a
-                  href="https://api.whatsapp.com/send?phone=5534999851811"
-                  target="_blank"
-                >
-                  <WhatsApp />
-                </a>
+              <Card cardWidth="110px" cardHeight="50px" className="IconsFooter">
+                <p>suporte@gmail.com</p>
                 <a
                   href="https://www.linkedin.com/company/gtec-ironn/?viewAsMember=true"
                   target="_blank"
