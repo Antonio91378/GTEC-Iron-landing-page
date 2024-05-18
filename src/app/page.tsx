@@ -63,8 +63,8 @@ export default function Home() {
               <h1
                 style={{
                   fontSize: "2.5rem",
-                  paddingBottom: "1.8rem",
-                  lineHeight: "3rem ",
+                  paddingBottom: "2.3rem",
+                  lineHeight: "3.2rem ",
                 }}
               >
                 Serviços de engenharia, foco em{" "}
@@ -106,7 +106,7 @@ export default function Home() {
         </Container>
         <Container className="AboutContainer" id="About">
           <Section
-            SectionHeight="612px"
+            SectionHeight="606px"
             sectionBackgroundColor="rgb(0, 143, 88)"
             className="AboutSection"
           >
@@ -127,7 +127,7 @@ export default function Home() {
               <p
                 style={{
                   fontSize: "1.2rem",
-                  marginTop: "2.4rem",
+                  marginTop: "2.7rem",
                   color: "var(--lightColor)",
                   textShadow: "1px 1px 5px var(--primaryColor)",
                 }}
@@ -245,7 +245,7 @@ export default function Home() {
             className="TitleSection portifolio"
           >
             <Card
-              cardWidth="680px"
+              cardWidth="560px"
               cardHeight="100%"
               cardBackgroundColor="rgb(0, 143, 88)"
               className="portifolio-card-1"
@@ -257,8 +257,7 @@ export default function Home() {
                 className=""
               >
                 <h1>
-                  Temos Parceria com Grandes <br />
-                  Nomes do Mercado
+                  Temos Parceria com <br /> Grandes Nomes do Mercado
                 </h1>
               </Card>
               <Card
@@ -270,43 +269,57 @@ export default function Home() {
                 <Image
                   src="/logo1.png"
                   alt="projetos GIF"
+                  width={70}
+                  height={70}
+                />
+                <Image
+                  src="/Mosaic_Logo.svg"
+                  alt="projetos GIF"
+                  width={140}
+                  height={90}
+                />
+                <Image
+                  src="/McCain-Logo.svg"
+                  alt="projetos GIF"
                   width={100}
-                  height={100}
+                  height={50}
                 />
                 <Image
-                  src="/logo2.png"
+                  src="/RHI_Magnesita_logo.svg"
                   alt="projetos GIF"
-                  width={150}
-                  height={90}
-                />
-                <Image
-                  src="/logo3.png"
-                  alt="projetos GIF"
-                  width={160}
-                  height={90}
-                />
-                <Image
-                  src="/logo4.png"
-                  alt="projetos GIF"
-                  width={150}
-                  height={100}
+                  width={130}
+                  height={80}
                 />
               </Card>
             </Card>
-            <Card
-              cardWidth="680px"
-              cardHeight="100%"
-              cardBackgroundColor="#222"
-              className="ImagesPotifolioCard2"
-            >
-              <Image
-                src="/portifolio.png"
-                alt="portifolio"
-                width={100}
-                height={80}
-                layout="responsive"
-              />
-            </Card>
+            <div className="portifolioImages">
+              <Card
+                cardWidth="310px"
+                cardHeight="100%"
+                className="ImagesPotifolioCard2"
+              >
+                <Image
+                  src="/portifolio1.png"
+                  alt="projetos GIF"
+                  width={100}
+                  height={80}
+                  layout="responsive"
+                />
+              </Card>
+              <Card
+                cardWidth="315.5px"
+                cardHeight="100%"
+                className="ImagesPotifolioCard2"
+              >
+                <Image
+                  src="/portifolio2.png"
+                  alt="projetos GIF"
+                  width={100}
+                  height={100}
+                  layout="responsive"
+                />
+              </Card>
+            </div>
           </Section>
         </Container>
         <Container className="FooterContainer">
@@ -318,7 +331,9 @@ export default function Home() {
             <Card cardWidth="1200px" cardHeight="auto" className="FooterCard">
               <FooterNav className="FooterHeader" />
               <Card cardWidth="110px" cardHeight="50px" className="IconsFooter">
-                <p>suporte@gmail.com</p>
+                <a href="mailto:suporte@gteciron.com" target="_blank">
+                  <p>suporte@gteciron.com</p>
+                </a>
                 <a
                   href="https://www.linkedin.com/company/gtec-ironn/?viewAsMember=true"
                   target="_blank"

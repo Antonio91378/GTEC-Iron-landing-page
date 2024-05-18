@@ -52,8 +52,9 @@
 
 .Section.TitleSection.portifolio {
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  width: 1360px;
+  width: 1200px;
 }
 
 .Section.TitleSection.portifolio h1 {

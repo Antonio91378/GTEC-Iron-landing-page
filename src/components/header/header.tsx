@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
           </a>
         </li>
         <li className="navbar-item">
-          <a onClick={() => handleScroll("#Contact")}>
+          <a onClick={() => handleScroll("#Portifolio")}>
             <Button
               buttonWidth="250px"
               buttonHeight="100%"
