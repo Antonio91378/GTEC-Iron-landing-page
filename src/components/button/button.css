@@ -35,7 +35,6 @@ button {
   background-color: var(--button-backgroundColor);
   border: solid 3px var(--secondaryColor);
   border-radius: 0px;
-  height: 64px;
 }
 
 .button {
@@ -44,7 +43,6 @@ button {
   font-family: "IBM Plex Sans", Sans-serif !important;
   font-size: 20px !important;
   font-weight: 100 !important;
-  padding: 4px;
 }
 
 .button.transitionButton:hover {
@@ -67,7 +65,10 @@ button {
 }
 .button.transitionButton.navbarButton.top {
   color: var(--darkColor);
-  height: 80px;
+  height: 70px;
+  width: 190px;
+  position: relative;
+  right: -10px;
 }
 .button.transitionButton.navbarButton.top:hover {
   cursor: pointer !important;

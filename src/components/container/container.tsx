@@ -10,7 +10,6 @@ const Container: React.FC<ContainerProps> = ({ className, children, id }) => {
   return (
     <div
       style={{
-        width: "100vw",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
