@@ -22,7 +22,7 @@
   font-size: 2.35rem;
   position: relative;
   top: 0px !important;
-  font-family: "IBM Plex Sans", Sans-serif;
+  font-family: "Roboto", Sans-serif;
   font-weight: 700;
 }
 
@@ -64,7 +64,7 @@
 .Section.TitleSection p {
   position: relative;
   top: 0px !important;
-  font-family: "IBM Plex Sans", Sans-serif;
+  font-family: "Roboto", Sans-serif;
   font-weight: 100;
 }
 
@@ -290,6 +290,7 @@
     padding-left: 40px !important;
     height: 300px !important;
     font-size: 1.6rem !important;
+    line-height: 1.75rem;
   }
   #about-text-title {
     position: absolute !important;
