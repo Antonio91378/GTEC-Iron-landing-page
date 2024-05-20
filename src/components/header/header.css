@@ -19,6 +19,19 @@
   top: 10px;
 }
 
+.IconsFooter {
+  position: relative;
+  margin: 0;
+  left: -76px;
+}
+.IconsFooter p {
+  position: relative;
+  top: -5px;
+}
+.IconsFooter a {
+  padding-left: 10px;
+}
+
 .navbar.FooterHeader .navbar-link {
   padding: 7px;
   text-decoration: none;
@@ -113,4 +126,47 @@
 
 .navbar-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    max-width: 1024px;
+  }
+  .navbar-list {
+    /* left: -30px; */
+    position: relative;
+    transform: scale(0.94);
+  }
+  .navbar-logo img {
+    left: 15px;
+  }
+  .slogan {
+    transform: scale(0.8);
+    left: 115px;
+  }
+
+  .FooterHeader {
+    display: none;
+  }
+
+  .IconsFooter {
+    left: 332px;
+  }
+}
+@media (max-width: 1024px) {
+  .IconsFooter p {
+    top: -6px;
+  }
+}
+@media (max-width: 480px) {
+  .navbar,
+  .navbar-list {
+    display: none !important;
+  }
+  .IconsFooter {
+    left: 0;
+  }
+  .IconsFooter p {
+    top: 4px;
+  }
 }

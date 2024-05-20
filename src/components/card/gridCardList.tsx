@@ -44,10 +44,6 @@ const cardsData: CardData[] = [
     cardTitle: "Construção Civil",
     children: (
       <>
-        <span style={{ color: "var(--primaryColor)", fontWeight: "700" }}>
-          Construções modulares para:{" "}
-        </span>
-        <br />
         Canteiros de obra; <br />
         Alojamentos; <br />
         Turn-Key; <br />
@@ -63,10 +59,6 @@ const cardsData: CardData[] = [
     cardTitle: "Corporate",
     children: (
       <>
-        <span style={{ color: "var(--primaryColor)", fontWeight: "700" }}>
-          Construções modulares para:{" "}
-        </span>
-        <br />
         Lojas; <br />
         Data Center; <br />
         Banco; <br />
@@ -82,10 +74,6 @@ const cardsData: CardData[] = [
     cardTitle: "Indústria",
     children: (
       <>
-        <span style={{ color: "var(--primaryColor)", fontWeight: "700" }}>
-          Construções modulares para:{" "}
-        </span>
-        <br />
         Canteiros de Obra; <br />
         Escritório Técnico; <br />
         Banheiro/Vestiário; <br />
@@ -102,10 +90,6 @@ const cardsData: CardData[] = [
     cardTitle: "Agronegócio",
     children: (
       <>
-        <span style={{ color: "var(--primaryColor)", fontWeight: "700" }}>
-          Construções modulares para:{" "}
-        </span>
-        <br />
         Alojamentos; <br />
         Depósitos; <br />
         Banheiro/Vestiário; <br />

@@ -1,0 +1,102 @@
+/* MenuContainer styles */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important    ;
+  z-index: 1000;
+  background-color: #fff;
+  width: 100%;
+  opacity: 0;
+  width: 480px !important;
+}
+.menu-container ul {
+  height: 0; /* Começa com altura 0 */
+  overflow: hidden; /* Esconde o conteúdo quando altura é 0 */
+  list-style: none;
+  transition: height 0.5s ease-out;
+}
+.menu-container li {
+  padding: 5px;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-family: "IBM Plex Sans", Sans-serif !important;
+}
+
+#exitIcon {
+  position: absolute;
+  top: 1px;
+  opacity: 0;
+}
+
+.menuClick-animation {
+  animation: 0.5s ease-in menuClick forwards;
+}
+
+.menuClick-exitAnimation {
+  animation: 0.5s ease-out inverseMenuClick forwards;
+}
+.exitIcon-animation {
+  animation: 0.3s ease-out exitIconInvoke forwards;
+}
+.exitIcon-exitAnimation {
+  animation: 0.4s ease-in inverseExitIconInvoke forwards;
+}
+
+.menu-container ul.open {
+  height: 200px; /* Altura final do dropdown */
+}
+
+@keyframes menuClick {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(720deg) scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes exitIconInvoke {
+  0% {
+    opacity: 0;
+    transform: rotate(0) scale(0.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes inverseExitIconInvoke {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(720deg) scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes inverseMenuClick {
+  0% {
+    transform: rotate(-720deg) scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-container {
+    opacity: 1;
+    left: 0 !important;
+  }
+}
