@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
 import Header from "@/components/header/header";
 import "./global.css";
@@ -9,11 +8,9 @@ import Button from "@/components/button/button";
 import Container from "@/components/container/container";
 import Image from "next/image";
 import GridComponentList from "@/components/card/gridCardList";
-import InfoIcon from "@/components/infoIcon/infoIcon";
-import ContactUs from "@/components/form/contactUsForm";
 import FooterNav from "@/components/header/FooterNav";
 import { Linkedin } from "@/components/icons/Linkedin";
-import { WhatsApp } from "@/components/icons/WhatsApp";
+import Menu from "@/components/menu/Menu";
 
 export default function Home() {
   const [selectedFilter, setSelectedFilter] = useState<number>(1);
@@ -43,10 +40,11 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <Container>
+    <div className="htmlContainer">
+      <Container className="htmlContainer">
         <Container className="Navbar">
           <Header />
+          <Menu />
         </Container>
         <Container className="HotSpotContainer" id="Home">
           <Section
@@ -131,6 +129,7 @@ export default function Home() {
                   color: "var(--lightColor)",
                   textShadow: "1px 1px 5px var(--primaryColor)",
                 }}
+                id="about-text-1"
               >
                 Com uma sólida experiência de 17 anos em projetos de engenharia,
                 na GTEC Iron, estamos comprometidos em garantir que todas as
@@ -156,6 +155,7 @@ export default function Home() {
                     color: "var(--lightColor)",
                     textShadow: "1px 1px 5px var(--primaryColor)",
                   }}
+                  id="about-text-title"
                 >
                   Sobre nós
                 </h1>
@@ -169,6 +169,7 @@ export default function Home() {
                   color: "var(--lightColor)",
                   textShadow: "1px 1px 5px var(--primaryColor)",
                 }}
+                id="about-text-2"
               >
                 Com uma equipe altamente qualificada e especializada,
                 desenvolvemos projetos abrangentes e inovadores nas áreas de
@@ -200,7 +201,9 @@ export default function Home() {
             sectionBackgroundColor="var(--primaryColor)"
             className="TitleSection"
           >
-            <h1 style={{ color: "var(--lightColor)" }}>Área de Negócio</h1>
+            <h1 id="areaTitle" style={{ color: "var(--lightColor)" }}>
+              Área de Negócio
+            </h1>
           </Section>
           <Section
             SectionHeight="50px"
@@ -231,7 +234,7 @@ export default function Home() {
             </button>
           </Section>
           <Section
-            SectionHeight="1500px"
+            SectionHeight="auto"
             sectionBackgroundColor="var(--lightColor)"
             className="GridSection"
           >
@@ -254,7 +257,7 @@ export default function Home() {
                 cardWidth="100%"
                 cardHeight="auto"
                 cardBackgroundColor="rgb(0, 143, 88)"
-                className=""
+                className="portifolio-card-1-title"
               >
                 <h1>
                   Temos Parceria com <br /> Grandes Nomes do Mercado
@@ -271,24 +274,28 @@ export default function Home() {
                   alt="projetos GIF"
                   width={70}
                   height={70}
+                  className="portifolio-imgs"
                 />
                 <Image
                   src="/Mosaic_Logo.svg"
                   alt="projetos GIF"
                   width={140}
                   height={90}
+                  className="portifolio-imgs"
                 />
                 <Image
                   src="/McCain-Logo.svg"
                   alt="projetos GIF"
                   width={100}
                   height={50}
+                  className="portifolio-imgs"
                 />
                 <Image
                   src="/RHI_Magnesita_logo.svg"
                   alt="projetos GIF"
                   width={130}
                   height={80}
+                  className="portifolio-imgs"
                 />
               </Card>
             </Card>
@@ -343,6 +350,7 @@ export default function Home() {
               </Card>
             </Card>
             <div
+              id="teste"
               style={{
                 width: "100%",
                 borderTop: "3px dotted #444",
@@ -350,7 +358,7 @@ export default function Home() {
                 zIndex: "300",
               }}
             />
-            <p>
+            <p id="teste2">
               {" "}
               copyright © 2024, all rights reserved. Powered by{" "}
               <a

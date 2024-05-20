@@ -11,8 +11,8 @@
   color: var(--lightColor);
 }
 
-.card.gridCards h2 {
-  font-size: 20px !important;
+.card.gridCards h3 {
+  font-size: 22px !important;
   font-family: "IBM Plex Sans", Sans-serif;
   color: var(--primaryColor);
   padding-left: 14px;
@@ -22,6 +22,7 @@
 
 .card.gridCards {
   box-shadow: 0px 2px 20px 1px var(--darkColor);
+  height: 280px;
 }
 .card.gridCards .icon {
   margin: 14px;
@@ -131,4 +132,72 @@
 
 .roll-out {
   animation: 0.8s ease-out rollout;
+}
+
+@media (max-width: 1024px) {
+  .CardAboutUs {
+    width: 400px;
+  }
+
+  .FooterCard {
+    width: 960px;
+  }
+
+  .about2 {
+    display: none;
+  }
+
+  .portifolio-card-1 {
+    width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .CardAboutUs {
+    height: 800px !important;
+    width: 480px !important;
+  }
+  .card {
+    max-width: 480px;
+  }
+
+  .portifolio-card-1 {
+    height: 200px;
+  }
+  .portifolio-card-1-title h1 {
+    position: relative !important;
+    padding-left: 80px;
+    padding-right: 60px;
+    font-size: 1.8rem !important;
+  }
+  .ImagesPotifolioCard {
+    padding-bottom: 50px;
+    top: -20px !important;
+    position: relative !important;
+    padding: 0 !important;
+    margin-bottom: 4rem;
+  }
+
+  .FooterCard {
+    justify-content: center !important;
+    align-items: start !important;
+    height: 100px !important;
+    width: 400px;
+  }
+
+  .FooterCard p {
+    padding: 0 !important;
+    position: none;
+    margin: 0;
+  }
+  .FooterCard a {
+    padding-left: 30px !important;
+    margin-top: 3rem;
+    position: none;
+  }
+  .IconsFooter {
+    margin: 0 !important;
+    display: flex;
+    justify-content: space-between;
+  }
 }

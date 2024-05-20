@@ -15,7 +15,7 @@
 }
 
 html {
-  width: 100%;
+  min-width: 1200px;
 }
 
 /* Redefinir Estilos de Texto */
@@ -44,4 +44,28 @@ Link {
 a {
   text-decoration: none;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 1024px;
+    min-width: 1024px;
+    margin: 0 auto; /* Center the content */
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 480px !important;
+    min-width: 480px !important;
+    margin: 0 auto; /* Center the content */
+    padding: 0;
+    box-sizing: border-box;
+  }
 }
