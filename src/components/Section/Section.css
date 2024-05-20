@@ -256,10 +256,9 @@
 
   .AboutSection {
     width: 480px !important;
-    height: 700px;
+    height: 50%;
     position: relative !important;
   }
-
   .MainSection img {
     width: 480px;
     height: 400px !important;
@@ -289,7 +288,7 @@
     width: 480px !important;
     padding-right: 40px !important;
     padding-left: 40px !important;
-    height: auto !important;
+    height: 300px !important;
     font-size: 1.6rem !important;
   }
   #about-text-title {
