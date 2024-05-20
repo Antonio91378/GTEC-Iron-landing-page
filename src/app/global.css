@@ -32,7 +32,7 @@ p {
 }
 
 p {
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "IBM Plex Sans", Sans-serif;
   font-weight: 100;
   padding: 10px;
 }
@@ -67,5 +67,8 @@ a {
     margin: 0 auto; /* Center the content */
     padding: 0;
     box-sizing: border-box;
+  }
+  p {
+    font-family: "Roboto", sans-serif !important;
   }
 }

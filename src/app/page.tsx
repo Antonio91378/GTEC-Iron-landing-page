@@ -104,7 +104,7 @@ export default function Home() {
         </Container>
         <Container className="AboutContainer" id="About">
           <Section
-            SectionHeight="606px"
+            SectionHeight="618px"
             sectionBackgroundColor="rgb(0, 143, 88)"
             className="AboutSection"
           >
@@ -125,7 +125,7 @@ export default function Home() {
               <p
                 style={{
                   fontSize: "1.2rem",
-                  marginTop: "2.7rem",
+                  marginTop: "3.2rem",
                   color: "var(--lightColor)",
                   textShadow: "1px 1px 5px var(--primaryColor)",
                 }}
