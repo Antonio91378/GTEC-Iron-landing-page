@@ -64,6 +64,7 @@ export default function Home() {
                   paddingBottom: "2.3rem",
                   lineHeight: "3.2rem ",
                 }}
+                id="main-text1"
               >
                 Serviços de engenharia, foco em{" "}
                 <span
@@ -72,13 +73,14 @@ export default function Home() {
                     textShadow: "1px 1px 1px var(--darkColor)",
                   }}
                 >
-                  mecânica, caldeiraria, tubulação <br /> e estrutura metálica
+                  mecânica, caldeiraria, tubulação <br id="br-MainText" /> e
+                  estrutura metálica
                 </span>
               </h1>
               <p
                 style={{
                   paddingBottom: "1.4rem",
-                  fontFamily: "'IBM Plex Sans', sans-serif",
+                  fontFamily: "'Roboto', sans-serif",
                   color: "var(--lightColor)",
                 }}
               >
