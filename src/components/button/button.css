@@ -40,7 +40,7 @@ button {
 .button {
   position: relative;
   color: #fff;
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "IBM Plex Sans", Sans-serif;
   font-size: 20px !important;
   font-weight: 100 !important;
 }

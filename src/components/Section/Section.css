@@ -22,7 +22,7 @@
   font-size: 2.35rem;
   position: relative;
   top: 0px !important;
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "IBM Plex Sans", Sans-serif;
   font-weight: 700;
 }
 
@@ -64,7 +64,7 @@
 .Section.TitleSection p {
   position: relative;
   top: 0px !important;
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "IBM Plex Sans", Sans-serif;
   font-weight: 100;
 }
 
@@ -256,6 +256,7 @@
 
   .AboutSection {
     width: 480px !important;
+    height: 700px;
     position: relative !important;
   }
 

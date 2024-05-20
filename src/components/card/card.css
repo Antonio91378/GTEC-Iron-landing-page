@@ -31,6 +31,7 @@
   padding-left: 14px;
   position: relative;
   line-height: 1.3rem;
+  color: #222;
 }
 
 .card.mainGif img {
@@ -78,19 +79,19 @@
 }
 
 .ContactUs1 {
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "IBM Plex Sans", Sans-serif;
   font-size: 20px !important;
   font-weight: 100 !important;
 }
 
 .ContactUs1 h1 {
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "IBM Plex Sans", Sans-serif;
   font-size: 20px !important;
   font-weight: 100 !important;
 }
 
 .ContactUs2 {
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "IBM Plex Sans", Sans-serif;
   font-size: 20px !important;
   font-weight: 100 !important;
   position: relative;
