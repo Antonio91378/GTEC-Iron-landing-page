@@ -261,9 +261,7 @@ export default function Home() {
                 cardBackgroundColor="rgb(0, 143, 88)"
                 className="portifolio-card-1-title"
               >
-                <h1>
-                  Temos Parceria com <br /> Grandes Nomes do Mercado
-                </h1>
+                <h1>Empresas onde desenvolvemos nossos trabalhos</h1>
               </Card>
               <Card
                 cardWidth="auto"
