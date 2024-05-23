@@ -163,6 +163,10 @@
   .portifolio-card-1 {
     width: 600px;
   }
+
+  .card.gridCards p {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -173,7 +177,9 @@
   .card {
     max-width: 480px;
   }
-
+  .card.gridCards p {
+    font-size: 24px;
+  }
   #br-MainText {
     display: none;
   }
