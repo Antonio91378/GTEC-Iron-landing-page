@@ -120,7 +120,7 @@ const cardsData: CardData[] = [
     cardTitle: "Projetos de caldeiraria",
     children: (
       <>
-        Criamos o modelamento em 3D e detalhamos em 2d para a fabricação e
+        Criamos o modelamento em 3D e detalhamos em 2D para a fabricação e
         montagem de seus projetos.
       </>
     ),
@@ -133,7 +133,7 @@ const cardsData: CardData[] = [
     cardTitle: "Estruturas Metálicas",
     children: (
       <>
-        Projetamos em 3d e geramos os detalhamentos em cad e os cálculos pelo
+        Projetamos em 3D e geramos os detalhamentos em cad e os cálculos pelo
         Cypecad.
       </>
     ),
