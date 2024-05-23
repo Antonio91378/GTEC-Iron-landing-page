@@ -106,9 +106,9 @@ const cardsData: CardData[] = [
     cardTitle: "Projetos mecânicos",
     children: (
       <>
-        Modelamos e detalhamos com o software Autodesk Inventor e o AutoCAD para
-        criar modelos 3D detalhados e desenhos técnicos de alta qualidade para
-        seus projetos.
+        Fazemos o modelamento e detalhamos com o Autodesk Inventor em conjunto
+        com o o AutoCAD para criar modelos 3D detalhados e desenhos técnicos de
+        alta qualidade.
       </>
     ),
     key: 5,
@@ -120,8 +120,8 @@ const cardsData: CardData[] = [
     cardTitle: "Projetos de caldeiraria",
     children: (
       <>
-        Modelamos em 3d e detalhamos em 2d para a fabricação e montagem de seus
-        projetos.
+        Criamos o modelamento em 3D e detalhamos em 2D para a fabricação e
+        montagem de seus projetos.
       </>
     ),
     key: 6,
@@ -133,7 +133,7 @@ const cardsData: CardData[] = [
     cardTitle: "Estruturas Metálicas",
     children: (
       <>
-        Projetamos em 3d e geramos os detalhamentos em cad e os cálculos pelo
+        Projetamos em 3D e geramos os detalhamentos em cad e os cálculos pelo
         Cypecad.
       </>
     ),
