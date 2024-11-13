@@ -37,6 +37,12 @@
   justify-content: center;
 }
 
+.slogan {
+  position: absolute;
+  top: 20px;
+  left: -1px;
+}
+
 .navbar.FooterHeader .navbar-list {
   list-style-type: none;
   margin: 0;
