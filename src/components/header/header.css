@@ -1,15 +1,15 @@
 .navbar {
   background-color: var(--lightColor);
-  padding: 10px;
-  position: fixed;
-  width: 100vw;
+  width: 1200px;
   z-index: 300;
-  height: 110px;
-  box-shadow: 0px 1px 0.5px 0.2px var(--darkColor);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar.FooterHeader {
-  width: 1000px;
+  width: 800px;
   margin-top: 1.2rem;
   background-color: #222;
   position: relative;
@@ -19,11 +19,24 @@
   top: 10px;
 }
 
+.IconsFooter {
+  position: relative;
+  margin: 0;
+  left: -76px;
+}
+.IconsFooter p {
+  position: relative;
+  top: -5px;
+}
+.IconsFooter a {
+  padding-left: 10px;
+}
+
 .navbar.FooterHeader .navbar-link {
-  padding: 10px;
+  padding: 7px;
   text-decoration: none;
   color: #fff;
-  font-family: "IBM Plex Sans", Sans-serif;
+  font-family: "Roboto", Sans-serif;
   font-size: 20px;
   font-weight: 400px;
 }
@@ -51,26 +64,40 @@
   justify-content: start;
   align-items: flex-end;
   height: 100%;
-  position: relative;
   left: -20px;
 }
 
 .navbar-list {
+  width: 800px;
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
   height: 100%;
-  position: relative;
-  left: 262px;
+  /* position: absolute; */
+  /* left: 250px; */
+}
+.slogan {
+  position: absolute;
+  width: 350px;
+  left: 115px;
+  top: 41px;
+  z-index: 600px;
+  font-size: 13px;
+}
+
+.slogan h3 {
+  font-weight: 900;
+  font-family: "Eurostile", Sans-serif;
+  color: #444;
 }
 .navbar-item {
   text-align: center;
-  margin-right: 10px;
-  font-size: 22px;
-  min-width: 135px;
+  margin-right: 9px;
+  min-width: 110px;
   height: 70px;
   display: flex;
   align-items: center;
@@ -85,19 +112,67 @@
 
 .navbar-logo img {
   height: 90px;
+  left: -20px;
   position: relative;
-  left: -526px;
+  transform: scale(1.2);
+}
+
+.navbar-logo {
+  position: relative;
 }
 
 .navbar-link {
-  padding: 10px;
+  padding: 7px;
   text-decoration: none;
-  color: var(--primaryColor);
-  font-family: "IBM Plex Sans", Sans-serif;
-  font-size: 20px;
+  color: var(--darkColor);
+  font-family: "Roboto", Sans-serif;
+  font-size: 18px;
   font-weight: 400px;
 }
 
 .navbar-link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    max-width: 1024px;
+  }
+  .navbar-list {
+    /* left: -30px; */
+    position: relative;
+    transform: scale(0.94);
+  }
+  .navbar-logo img {
+    left: 15px;
+  }
+  .slogan {
+    transform: scale(0.8);
+    left: 115px;
+  }
+
+  .FooterHeader {
+    display: none;
+  }
+
+  .IconsFooter {
+    left: 332px;
+  }
+}
+@media (max-width: 1024px) {
+  .IconsFooter p {
+    top: -6px;
+  }
+}
+@media (max-width: 480px) {
+  .navbar,
+  .navbar-list {
+    display: none !important;
+  }
+  .IconsFooter {
+    left: 0;
+  }
+  .IconsFooter p {
+    top: 4px;
+  }
 }

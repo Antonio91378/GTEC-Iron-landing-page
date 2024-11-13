@@ -4,14 +4,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   position: relative;
 }
 
 .Section.AboutSection {
-  width: 1400px;
+  width: 1200px;
   justify-content: space-around;
   align-items: start;
+}
+
+#about-text-1,
+#about-text-2 {
+  text-align: justify;
+}
+
+#about-text-2 {
+  position: relative;
+  top: -10px;
 }
 
 .Section.TitleSection {
@@ -23,7 +32,7 @@
   font-size: 2.35rem;
   position: relative;
   top: 0px !important;
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "Roboto", Sans-serif;
   font-weight: 700;
 }
 
@@ -53,8 +62,9 @@
 
 .Section.TitleSection.portifolio {
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  width: 1360px;
+  width: 1200px;
 }
 
 .Section.TitleSection.portifolio h1 {
@@ -64,12 +74,16 @@
 .Section.TitleSection p {
   position: relative;
   top: 0px !important;
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "Roboto", Sans-serif;
   font-weight: 100;
 }
 
 .Section .CardAboutUs img {
   box-shadow: 0px 0.5px 2.5px 0.2px var(--secondaryColor);
+}
+
+.Section .CardAboutUs .aboutImage1 {
+  margin-top: 17px;
 }
 
 .PortifolioSection {
@@ -80,37 +94,46 @@
 
 .GridSection {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 26px;
-  width: 1355px;
+  width: 100%;
+  max-width: 1200px;
   position: relative;
   top: 0px !important;
   height: auto;
 }
 
+.card {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+.MainSection {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
+
 .Section .CardComponent {
   position: relative;
-  left: -95px;
-  top: 90px;
+
+  /* left: -95px; */
+  top: 75px;
 }
 
 .Section .mainGif {
   position: relative;
   top: 90px;
-  left: -60px;
-}
-
-.Section .CardServices {
-  border: 1px solid red;
+  /* left: -60px; */
 }
 
 .ourServicesButtons {
-  width: 1355px;
+  width: 1200px;
   justify-content: start;
 }
 
 .Section.FooterSection {
-  width: 1355px;
+  width: 1200px;
   align-items: center;
   justify-content: start;
   flex-direction: column;
@@ -119,4 +142,189 @@
 .Section.FooterSection p {
   margin-top: 1.2rem;
   color: gray;
+}
+
+@media (max-width: 1024px) {
+  .MainSection {
+    max-width: 1024px;
+    height: 550px;
+  }
+  .CardComponent {
+    z-index: 600;
+    position: absolute !important ;
+    width: 1024px !important;
+    top: 0px !important;
+    height: 550px !important;
+    background-color: rgba(6, 78, 44, 0.94) !important;
+  }
+
+  .CardComponent h1 {
+    width: 700px;
+    margin-top: 6rem;
+    margin-left: 2rem !important;
+    font-size: 3rem !important;
+  }
+
+  .CardComponent p {
+    margin-left: 2rem !important;
+    width: 500px;
+  }
+
+  .mainGif img {
+    position: absolute;
+    top: -250px;
+    width: 1024px;
+    height: 700px !important;
+  }
+  .GridSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    max-width: 600px;
+    gap: 20px;
+    position: relative;
+    transition: 400ms;
+    margin-bottom: 50px;
+  }
+
+  .AboutSection {
+    width: 850px !important;
+  }
+
+  .TitleSection.portifolio {
+    display: flex;
+    align-items: center;
+    width: 600px !important;
+    justify-content: center;
+  }
+
+  .TitleSection.portifolio .portifolioImages {
+    display: none;
+  }
+
+  .ourServicesButtons {
+    width: 1024px;
+    justify-content: center;
+  }
+
+  .Section.FooterSection {
+    width: 1000px;
+    left: -10px;
+    position: relative !important;
+  }
+
+  .navbar-list {
+    width: 700px;
+  }
+
+  .FooterHeader {
+    width: 700px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .GridSection {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
+    max-width: 350px;
+    max-height: auto;
+    gap: 0px;
+    transition: 400ms;
+    margin-top: 32px;
+  }
+
+  .gridCards {
+    height: 300px !important;
+  }
+
+  .ourServicesButtons {
+    transform: scale(0.7);
+    padding-top: 20px;
+    z-index: 100;
+    flex-direction: column;
+    width: 480px !important;
+  }
+
+  .transitionButton.servicesButton {
+    height: 70px !important;
+    width: 400px;
+  }
+
+  .ourServicesButtons div {
+    font-size: 1.9rem;
+  }
+
+  #areaTitle {
+    margin-bottom: 1rem;
+  }
+
+  .MainSection {
+    max-width: 480px;
+    height: 550px;
+    /* height: 550px; */
+  }
+
+  .AboutSection {
+    width: 480px !important;
+    height: 50%;
+    position: relative !important;
+  }
+  .MainSection img {
+    width: 480px;
+    height: 400px !important;
+  }
+  .CardComponent {
+    z-index: 10;
+    width: 480px !important;
+  }
+
+  .CardComponent h1 {
+    font-size: 2rem !important;
+    width: 430px;
+    line-height: 2.5rem !important;
+  }
+
+  .card.roll-out p {
+    line-height: 1.6rem !important;
+  }
+
+  .CardComponent p {
+    width: 300px;
+    font-size: 1.4rem;
+  }
+
+  #about-text-1 {
+    margin-top: 5rem !important;
+    width: 480px !important;
+    padding-right: 40px !important;
+    padding-left: 40px !important;
+    height: 300px !important;
+    font-size: 1.6rem !important;
+    line-height: 1.75rem;
+  }
+  #about-text-title {
+    position: absolute !important;
+    left: -330px;
+    top: 350px !important;
+  }
+  #about-text-2 {
+    position: absolute !important;
+    display: none !important;
+  }
+
+  .TitleSection.portifolio {
+    max-width: 480px;
+    height: 400px !important;
+    position: relative;
+  }
+
+  .Section.FooterSection {
+    max-width: 480px;
+    height: 200px;
+    left: 0;
+  }
+
+  #about-text-1 {
+    font-size: 1.4rem !important;
+  }
 }

@@ -7,13 +7,16 @@
 .card h1 {
   font-family: "Eurostile", Sans-serif;
   font-weight: 900;
-  line-height: 60px;
   color: var(--lightColor);
 }
 
-.card.gridCards h2 {
-  font-size: 20px !important;
-  font-family: "IBM Plex Sans", Sans-serif;
+#main-text1 {
+  font-size: 51px !important;
+}
+
+.card.gridCards h3 {
+  font-size: 22px !important;
+  font-family: "Roboto", Sans-serif;
   color: var(--primaryColor);
   padding-left: 14px;
   position: relative;
@@ -22,6 +25,7 @@
 
 .card.gridCards {
   box-shadow: 0px 2px 20px 1px var(--darkColor);
+  height: 280px;
 }
 .card.gridCards .icon {
   margin: 14px;
@@ -30,12 +34,17 @@
   padding-left: 14px;
   position: relative;
   line-height: 1.3rem;
+  color: #222;
+  font-size: 19px;
 }
 
 .card.mainGif img {
   box-shadow: 0px 0px 10px 1px var(--secondaryColor);
 }
-
+.about2 {
+  position: relative;
+  left: 15px;
+}
 .portifolio-card-1 {
   display: flex;
   flex-direction: column;
@@ -47,11 +56,11 @@
   font-family: "Eurostile", Sans-serif;
   text-shadow: 1px 1px 4px rgb(0, 118, 73);
   font-weight: 900;
+  font-size: 38px;
   line-height: 3rem;
   letter-spacing: 0px;
   margin-bottom: 1.5rem;
   text-align: start;
-  padding-left: 20px;
 }
 .card .ImagesPotifolioCard {
   margin-top: 1.2rem;
@@ -62,24 +71,31 @@
   gap: 30px;
 }
 
+.portifolioImages {
+  box-shadow: 0px 0px 10px 1px var(--secondaryColor);
+  display: flex;
+  height: 261px;
+  justify-content: center;
+  align-items: center;
+}
 .card.ImagesPotifolioCard2 img {
-  box-shadow: 0px 5px 10px 1px var(--secondaryColor);
+  border: none;
 }
 
 .ContactUs1 {
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "Roboto", Sans-serif;
   font-size: 20px !important;
   font-weight: 100 !important;
 }
 
 .ContactUs1 h1 {
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "Roboto", Sans-serif;
   font-size: 20px !important;
   font-weight: 100 !important;
 }
 
 .ContactUs2 {
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "Roboto", Sans-serif;
   font-size: 20px !important;
   font-weight: 100 !important;
   position: relative;
@@ -97,6 +113,7 @@
 }
 
 .IconsFooter {
+  width: 230px;
   display: flex;
   justify-content: space-between;
   margin-top: 5rem;
@@ -104,7 +121,7 @@
 @keyframes rollout {
   0% {
     opacity: 0;
-    transform: translateX(900px);
+    transform: translateX(80px);
   }
   100% {
     opacity: 1;
@@ -112,6 +129,105 @@
   }
 }
 
+.IconsFooter p {
+  margin-bottom: 0 !important;
+  margin-top: 14px !important;
+  color: #fff !important;
+}
+
 .roll-out {
   animation: 0.8s ease-out rollout;
+}
+
+@media (max-width: 1024px) {
+  .CardAboutUs {
+    width: 400px;
+  }
+
+  .FooterCard {
+    width: 960px;
+  }
+
+  #br-MainText {
+    display: none;
+  }
+
+  #main-text1 {
+    font-size: 56px !important;
+  }
+
+  .about2 {
+    display: none;
+  }
+
+  .portifolio-card-1 {
+    width: 600px;
+  }
+
+  .card.gridCards p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .CardAboutUs {
+    height: 780px !important;
+    width: 480px !important;
+  }
+  .card {
+    max-width: 480px;
+  }
+  .card.gridCards p {
+    font-size: 24px;
+  }
+  #br-MainText {
+    display: none;
+  }
+
+  #main-text1 {
+    font-size: 40px !important;
+  }
+
+  .portifolio-card-1 {
+    height: 200px;
+  }
+  .portifolio-card-1-title h1 {
+    position: relative !important;
+    padding-left: 60px;
+    padding-right: 60px;
+    line-height: 2rem !important;
+    font-size: 2.3rem !important;
+    padding-top: 20px;
+    text-align: center !important;
+  }
+  .ImagesPotifolioCard {
+    padding-bottom: 50px;
+    top: -20px !important;
+    position: relative !important;
+    padding: 0 !important;
+    margin-bottom: 4rem;
+  }
+
+  .FooterCard {
+    justify-content: center !important;
+    align-items: start !important;
+    height: 100px !important;
+    width: 400px;
+  }
+
+  .FooterCard p {
+    padding: 0 !important;
+    position: none;
+    margin: 0;
+  }
+  .FooterCard a {
+    padding-left: 30px !important;
+    margin-top: 3rem;
+    position: none;
+  }
+  .IconsFooter {
+    margin: 0 !important;
+    display: flex;
+    justify-content: space-between;
+  }
 }

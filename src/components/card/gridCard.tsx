@@ -25,8 +25,8 @@ const GridCard: React.FC<CardProps> = (props) => {
   return (
     <div className={`card ${props.className}`} style={cardStyle}>
       <IconComponent className="icon" />
-      <h2>{props.cardTitle}</h2>
-      <p>{props.children}</p>
+      <h3>{props.cardTitle}</h3>
+      <p style={{ textAlign: "justify" }}>{props.children}</p>
     </div>
   );
 };

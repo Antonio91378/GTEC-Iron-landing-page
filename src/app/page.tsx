@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
 import Header from "@/components/header/header";
 import "./global.css";
@@ -9,11 +8,9 @@ import Button from "@/components/button/button";
 import Container from "@/components/container/container";
 import Image from "next/image";
 import GridComponentList from "@/components/card/gridCardList";
-import InfoIcon from "@/components/infoIcon/infoIcon";
-import ContactUs from "@/components/form/contactUsForm";
 import FooterNav from "@/components/header/FooterNav";
 import { Linkedin } from "@/components/icons/Linkedin";
-import { WhatsApp } from "@/components/icons/WhatsApp";
+import Menu from "@/components/menu/Menu";
 
 export default function Home() {
   const [selectedFilter, setSelectedFilter] = useState<number>(1);
@@ -43,9 +40,12 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <Container>
-        <Header />
+    <div className="htmlContainer">
+      <Container className="htmlContainer">
+        <Container className="Navbar">
+          <Header />
+          <Menu />
+        </Container>
         <Container className="HotSpotContainer" id="Home">
           <Section
             SectionHeight="808px"
@@ -53,12 +53,19 @@ export default function Home() {
             className="MainSection"
           >
             <Card
-              cardWidth="614px"
+              cardWidth="550px"
               cardHeight="490px"
               cardBackgroundColor="rgb(6, 78, 44)"
               className="CardComponent"
             >
-              <h1 style={{ fontSize: "2.9rem", paddingBottom: "1.8rem" }}>
+              <h1
+                style={{
+                  fontSize: "2.5rem",
+                  paddingBottom: "2.3rem",
+                  lineHeight: "3.2rem ",
+                }}
+                id="main-text1"
+              >
                 Serviços de engenharia, foco em{" "}
                 <span
                   style={{
@@ -66,13 +73,14 @@ export default function Home() {
                     textShadow: "1px 1px 1px var(--darkColor)",
                   }}
                 >
-                  mecânica, caldeiraria, tubulação <br /> e estrutura metálica
+                  mecânica, caldeiraria, tubulação <br id="br-MainText" /> e
+                  estrutura metálica
                 </span>
               </h1>
               <p
                 style={{
                   paddingBottom: "1.4rem",
-                  fontFamily: "'IBM Plex Sans', sans-serif",
+                  fontFamily: "'Roboto', sans-serif",
                   color: "var(--lightColor)",
                 }}
               >
@@ -80,20 +88,9 @@ export default function Home() {
                 trabalhando com construções modulares ágeis, limpas e
                 eficientes. Vendas e locações sustentáveis.
               </p>
-              <a onClick={() => handleScroll("#Contact")}>
-                <Button
-                  buttonWidth={"400px"}
-                  buttonHeight={"60px"}
-                  buttonBackgroundColor={"var(--primaryColor)"}
-                  buttonTextColor={"white"}
-                  className="transitionButton mainButton"
-                >
-                  Agende uma consulta técnica
-                </Button>
-              </a>
             </Card>
             <Card
-              cardWidth="560px"
+              cardWidth="600px"
               cardHeight="490px"
               cardBackgroundColor="rgb(6, 78, 44)"
               className="mainGif"
@@ -101,7 +98,7 @@ export default function Home() {
               <Image
                 src="/projetos.gif"
                 alt="projetos GIF"
-                width={720}
+                width={600}
                 height={400}
               />
             </Card>
@@ -109,17 +106,18 @@ export default function Home() {
         </Container>
         <Container className="AboutContainer" id="About">
           <Section
-            SectionHeight="650px"
+            SectionHeight="618px"
             sectionBackgroundColor="rgb(0, 143, 88)"
             className="AboutSection"
           >
             <Card
-              cardWidth="468px"
+              cardWidth="35%"
               cardHeight="640px"
               className="CardAboutUs"
               cardBackgroundColor="rgb(0, 143, 88)"
             >
               <Image
+                className="aboutImage1"
                 src="/aboutUs1.png"
                 alt="aboutUs1"
                 width={100}
@@ -128,11 +126,12 @@ export default function Home() {
               />
               <p
                 style={{
-                  fontSize: "1.35rem",
-                  paddingTop: "2.5rem",
+                  fontSize: "1.2rem",
+                  marginTop: "3.2rem",
                   color: "var(--lightColor)",
                   textShadow: "1px 1px 5px var(--primaryColor)",
                 }}
+                id="about-text-1"
               >
                 Com uma sólida experiência de 17 anos em projetos de engenharia,
                 na GTEC Iron, estamos comprometidos em garantir que todas as
@@ -142,7 +141,7 @@ export default function Home() {
               </p>
             </Card>
             <Card
-              cardWidth="868px"
+              cardWidth="65%"
               cardHeight="640px"
               className="CardAboutUs"
               cardBackgroundColor="rgb(0, 143, 88)"
@@ -154,20 +153,25 @@ export default function Home() {
               >
                 <h1
                   style={{
+                    marginTop: "1.2rem",
                     color: "var(--lightColor)",
                     textShadow: "1px 1px 5px var(--primaryColor)",
                   }}
+                  id="about-text-title"
                 >
                   Sobre nós
                 </h1>
               </Section>
               <p
                 style={{
-                  fontSize: "1.35rem",
+                  paddingLeft: "15px",
+                  marginTop: ".6rem",
+                  fontSize: "1.2rem",
                   paddingBottom: "3.5rem",
                   color: "var(--lightColor)",
                   textShadow: "1px 1px 5px var(--primaryColor)",
                 }}
+                id="about-text-2"
               >
                 Com uma equipe altamente qualificada e especializada,
                 desenvolvemos projetos abrangentes e inovadores nas áreas de
@@ -183,11 +187,12 @@ export default function Home() {
               </p>
 
               <Image
+                className="about2"
                 src="/aboutUs2.png"
                 alt="aboutUs2"
-                width={100}
-                height={80}
-                layout="responsive"
+                width={750}
+                height={235}
+                // layout="responsive"
               />
             </Card>
           </Section>
@@ -198,7 +203,9 @@ export default function Home() {
             sectionBackgroundColor="var(--primaryColor)"
             className="TitleSection"
           >
-            <h1 style={{ color: "var(--lightColor)" }}>Área de Negócio</h1>
+            <h1 id="areaTitle" style={{ color: "var(--lightColor)" }}>
+              Área de Negócio
+            </h1>
           </Section>
           <Section
             SectionHeight="50px"
@@ -207,7 +214,7 @@ export default function Home() {
           >
             <button onClick={() => changeFilterOurServices(1)}>
               <Button
-                buttonWidth="300px"
+                buttonWidth="260px"
                 buttonHeight="100%"
                 buttonBackgroundColor="var(--darkColor)"
                 buttonTextColor="var(--lightColor)"
@@ -218,7 +225,7 @@ export default function Home() {
             </button>
             <button onClick={() => changeFilterOurServices(2)}>
               <Button
-                buttonWidth="300px"
+                buttonWidth="260px"
                 buttonHeight="100%"
                 buttonBackgroundColor="var(--darkColor)"
                 buttonTextColor="var(--lightColor)"
@@ -229,7 +236,7 @@ export default function Home() {
             </button>
           </Section>
           <Section
-            SectionHeight="1500px"
+            SectionHeight="auto"
             sectionBackgroundColor="var(--lightColor)"
             className="GridSection"
           >
@@ -243,7 +250,7 @@ export default function Home() {
             className="TitleSection portifolio"
           >
             <Card
-              cardWidth="680px"
+              cardWidth="560px"
               cardHeight="100%"
               cardBackgroundColor="rgb(0, 143, 88)"
               className="portifolio-card-1"
@@ -252,12 +259,9 @@ export default function Home() {
                 cardWidth="100%"
                 cardHeight="auto"
                 cardBackgroundColor="rgb(0, 143, 88)"
-                className=""
+                className="portifolio-card-1-title"
               >
-                <h1>
-                  Temos Parceria com Grandes <br />
-                  Nomes do Mercado
-                </h1>
+                <h1>Empresas onde desenvolvemos nossos trabalhos</h1>
               </Card>
               <Card
                 cardWidth="auto"
@@ -268,91 +272,61 @@ export default function Home() {
                 <Image
                   src="/logo1.png"
                   alt="projetos GIF"
+                  width={70}
+                  height={70}
+                  className="portifolio-imgs"
+                />
+                <Image
+                  src="/Mosaic_Logo.svg"
+                  alt="projetos GIF"
+                  width={140}
+                  height={90}
+                  className="portifolio-imgs"
+                />
+                <Image
+                  src="/McCain-Logo.svg"
+                  alt="projetos GIF"
                   width={100}
-                  height={100}
+                  height={50}
+                  className="portifolio-imgs"
                 />
                 <Image
-                  src="/logo2.png"
+                  src="/RHI_Magnesita_logo.svg"
                   alt="projetos GIF"
-                  width={160}
-                  height={90}
-                />
-                <Image
-                  src="/logo3.png"
-                  alt="projetos GIF"
-                  width={160}
-                  height={90}
-                />
-                <Image
-                  src="/logo4.png"
-                  alt="projetos GIF"
-                  width={150}
-                  height={100}
+                  width={130}
+                  height={80}
+                  className="portifolio-imgs"
                 />
               </Card>
             </Card>
-            <Card
-              cardWidth="680px"
-              cardHeight="100%"
-              cardBackgroundColor="#222"
-              className="ImagesPotifolioCard2"
-            >
-              <Image
-                src="/portifolio.png"
-                alt="portifolio"
-                width={100}
-                height={80}
-                layout="responsive"
-              />
-            </Card>
-          </Section>
-        </Container>
-        <Container className="ContactContainer" id="Contact">
-          <Section
-            SectionHeight="510px"
-            sectionBackgroundColor="rgb(0, 94, 58)"
-          >
-            <Card
-              cardWidth="680px"
-              cardHeight="477px"
-              cardBackgroundColor="rgb(6, 78, 44)"
-              className="ContactUs1"
-            >
-              <Section
-                SectionHeight="100px"
-                sectionBackgroundColor="rgb(0, 143, 88)"
-                className="ContactUs TitleSection"
+            <div className="portifolioImages">
+              <Card
+                cardWidth="310px"
+                cardHeight="100%"
+                className="ImagesPotifolioCard2"
               >
-                <h1
-                  style={{
-                    color: "var(--lightColor)",
-                    textShadow: "1px 1px 5px var(--primaryColor)",
-                  }}
-                >
-                  Fale Conosco
-                </h1>
-                <a
-                  href="https://api.whatsapp.com/send?phone=5534999851811"
-                  target="_blank"
-                >
-                  <WhatsApp />
-                </a>
-              </Section>
-              <ContactUs />
-            </Card>
-            <Card
-              cardWidth="680px"
-              cardHeight="477px"
-              cardBackgroundColor="rgb(6, 78, 44)"
-              className="ContactUs2"
-            >
-              <Image
-                src="/contactUs3.png"
-                alt="aboutUs2"
-                width={840}
-                height={580}
-              />
-            </Card>
+                <Image
+                  src="/portifolio1.png"
+                  alt="projetos GIF"
+                  width={100}
+                  height={80}
+                  layout="responsive"
+                />
+              </Card>
+              <Card
+                cardWidth="315.5px"
+                cardHeight="100%"
+                className="ImagesPotifolioCard2"
+              >
+                <Image
+                  src="/portifolio2.png"
+                  alt="projetos GIF"
+                  width={100}
+                  height={100}
+                  layout="responsive"
+                />
+              </Card>
+            </div>
           </Section>
         </Container>
         <Container className="FooterContainer">
@@ -361,14 +335,11 @@ export default function Home() {
             sectionBackgroundColor="#222"
             className="FooterSection"
           >
-            <Card cardWidth="1355px" cardHeight="auto" className="FooterCard">
+            <Card cardWidth="1200px" cardHeight="auto" className="FooterCard">
               <FooterNav className="FooterHeader" />
-              <Card cardWidth="96px" cardHeight="50px" className="IconsFooter">
-                <a
-                  href="https://api.whatsapp.com/send?phone=5534999851811"
-                  target="_blank"
-                >
-                  <WhatsApp />
+              <Card cardWidth="110px" cardHeight="50px" className="IconsFooter">
+                <a href="mailto:suporte@gteciron.com" target="_blank">
+                  <p>suporte@gteciron.com</p>
                 </a>
                 <a
                   href="https://www.linkedin.com/company/gtec-ironn/?viewAsMember=true"
@@ -379,6 +350,7 @@ export default function Home() {
               </Card>
             </Card>
             <div
+              id="teste"
               style={{
                 width: "100%",
                 borderTop: "3px dotted #444",
@@ -386,7 +358,7 @@ export default function Home() {
                 zIndex: "300",
               }}
             />
-            <p>
+            <p id="teste2">
               {" "}
               copyright © 2024, all rights reserved. Powered by{" "}
               <a

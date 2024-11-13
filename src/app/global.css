@@ -7,6 +7,36 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Eurostile";
+  src: url("https://db.onlinewebfonts.com/t/edf2b5ed76e67020a5e0bd3b76a28ead.eot");
+  src: url("https://db.onlinewebfonts.com/t/edf2b5ed76e67020a5e0bd3b76a28ead.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/edf2b5ed76e67020a5e0bd3b76a28ead.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/edf2b5ed76e67020a5e0bd3b76a28ead.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/edf2b5ed76e67020a5e0bd3b76a28ead.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/edf2b5ed76e67020a5e0bd3b76a28ead.svg#EurostileEF-Black")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("https://db.onlinewebfonts.com/t/0033a2fbc0329740fb86c1cfd134cb94.eot");
+  src: url("https://db.onlinewebfonts.com/t/0033a2fbc0329740fb86c1cfd134cb94.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/0033a2fbc0329740fb86c1cfd134cb94.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/0033a2fbc0329740fb86c1cfd134cb94.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/0033a2fbc0329740fb86c1cfd134cb94.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/0033a2fbc0329740fb86c1cfd134cb94.svg#Roboto")
+      format("svg");
+}
+
 :root {
   --primaryColor: rgb(0, 56, 35);
   --secondaryColor: rgb(73, 214, 148);
@@ -15,7 +45,7 @@
 }
 
 html {
-  overflow-x: hidden;
+  min-width: 1200px;
 }
 
 /* Redefinir Estilos de Texto */
@@ -32,7 +62,7 @@ p {
 }
 
 p {
-  font-family: "IBM Plex Sans", Sans-serif !important;
+  font-family: "Roboto", Sans-serif;
   font-weight: 100;
   padding: 10px;
 }
@@ -44,4 +74,28 @@ Link {
 a {
   text-decoration: none;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 1024px;
+    min-width: 1024px;
+    margin: 0 auto; /* Center the content */
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 480px !important;
+    min-width: 480px !important;
+    margin: 0 auto; /* Center the content */
+    padding: 0;
+    box-sizing: border-box;
+  }
 }
